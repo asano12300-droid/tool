@@ -1,0 +1,19 @@
+#!/bin/bash
+
+doing=$1
+if [[ "$doing" == "install" ]]; then
+	wget https://github.com/asano12300-droid/tool/raw/refs/heads/main/$2/install.sh | sh
+elif [[ "$doing" == "uninstall" ]]; then
+	sudo rm /usr/local/bin/aryu44
+elif [[ "$doing" == "help"  ]]; then
+	echo "↓インストールされているもの↓"
+	if [ -e /usr/local/bin/bot ]; then
+		echo "bot"
+	fi
+	if [ -e /usr/local/bin/system ]; then
+		echo "system"
+	fi
+else
+	echo "何をしたいか選択してください"
+fi
+
