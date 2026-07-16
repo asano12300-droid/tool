@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [[ "$1" == "reload" ]]; then
+	sudo systemctl daemon-reload
+elif [[ "$1" == "restart" ]]; then
+	sudo systemctl restart $2
+elif [[ "$1" == "status" ]]; then
+	sudo systemctl status $2
+elif [[ "$1" == "enable" ]]; then
+	sudo systemctl enable $2
+elif [[ "$1" == "disbale" ]]; then
+	sudo sysytemctl disbale $2
+else
+	echo "何をしたいか選択したください"
+fi
