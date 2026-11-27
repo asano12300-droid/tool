@@ -26,3 +26,5 @@ japanese () {
     source /home/$user/.bashrc
 	wait
 }
+
+japanese
